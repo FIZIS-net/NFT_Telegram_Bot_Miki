@@ -28,9 +28,6 @@ Bot for assistance in trading and resale of NFT token's
     ETHDROPURL = 'https://nextdrop.is/upcoming?chain=ethereum' # Website with information about drops (Ethereum)
     SOLDROPURL = 'https://nextdrop.is/upcoming?chain=solana'   # Website with information about drops (Solana)
 
-    SOLRATEURL = 'https://ru.investing.com/crypto/solana' # Website with information about the Solana course
-    ETHRATEURL = 'https://ru.investing.com/crypto/ethereum/eth-usd' # Website with information about the Ethereum course
-
     SOLDROPDATA = 'data/solDropData.csv' #A file with the data obtained when parsing Solana drops
     ETHDROPDATA = 'data/ethDropData.csv' #A file with the data obtained when parsing Ethereum drops
  ```

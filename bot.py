@@ -7,13 +7,15 @@ from datetime import timedelta
 import time
 from bs4 import BeautifulSoup
 from telebot import types
+import json
 
-def rateParser(url):
-    response = requests.get(url, headers = config.HEADERS)
-    soup = BeautifulSoup(response.text, 'lxml')
-    rate = soup.find('span', {"id": "last_last"}).text
-    return rate
 
+def reqRate(symbol):
+    response = requests.get("https://data.messari.io/api/v1/assets/"+ symbol +"/metrics", headers = config.HEADERS)
+    response = json.loads(response.text)
+    price = round(response['data']['market_data']['price_usd'], 2)
+    return price
+    
 def getDisResponse(id):
     response = requests.get('https://discord.com/api/v8/invites/'+id+'?with_counts=true', headers = config.HEADERS)
     return response.json()
@@ -68,9 +70,9 @@ def welcome(message):
 def handler(message):
     if message.chat.type == 'private':
         if message.text == "📈 Курс SOL":
-            bot.send_message(message.chat.id, "SOL= " + rateParser(config.SOLRATEURL)+"$")
+            bot.send_message(message.chat.id, "SOL= " + str(reqRate('sol'))+"$")
         if message.text == "📈 Курс ETH":
-            bot.send_message(message.chat.id, "ETH= " + rateParser(config.ETHRATEURL)+"$")
+            bot.send_message(message.chat.id, "ETH= " + str(reqRate('eth'))+"$")
         if message.text == "📅 Дропы на Solana":
             drops = pd.read_csv(config.SOLDROPDATA ,sep='\t')
             for index, row in drops.iterrows():
