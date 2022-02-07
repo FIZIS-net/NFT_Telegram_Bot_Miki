@@ -7,6 +7,7 @@ ETHDROPURL = 'https://nextdrop.is/upcoming?chain=ethereum'
 SOLDROPURL = 'https://nextdrop.is/upcoming?chain=solana'
 
 HOWRAREISAPI = "https://howrare.is/api/v0.1/drops"
+MAGICEDENAPI = "https://api-mainnet.magiceden.io/launchpad_collections"
 
 SOLDROPDATA = 'data/solDropData.csv'
 ETHDROPDATA = 'data/ethDropData.csv'

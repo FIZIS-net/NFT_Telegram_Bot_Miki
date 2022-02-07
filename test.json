@@ -1,0 +1,16 @@
+{'_id': '61b0c9565611bdf45e14e144',\
+    'symbol': 'mkfrgo',
+     'published': True,
+      'featured': False,
+       'edition': 'MEKKA FROGGO',
+        'name': 'MEKKA FROGGO 1.0',
+         'description': 'Paper Clip managed to manipulate frogs that had been injected with 115 components, turning them into war-hungry amphibians. The frogs who managed to flee from the laboratory formed a militia of their own, separate from the operation and planned to take on Paper Clip’s frog army, and ultimately reduce Paper Clip to rubble. Humans launched the Frog War to destroy the Prophets Alliance…', 
+    'image': 'https://dl.airtable.com/.attachmentThumbnails/378feca21f54c458d483634f198c0c63/7b6898f3',
+     'price': 0.49, 
+     'size': 999, 
+     'mint': {
+        'candyMachineId': '8YRdWWvRvjsoKY6Zvk3rvZGHQhBydi8kGoJrdjXMWQHg',
+        'config': '2yEEPQNuLbW2nze3zpWKAiD1imJzXFouPTSqPBmBhhAA',
+         'treasury': '3YWNi3EtkmXjZkhHj42d4oFcasXwku4T8FdLmKw51Nzx'
+    }, 
+    'prelaunch': {'foo': 'bar'}}
